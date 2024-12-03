@@ -1,0 +1,87 @@
+/* Общие стили для header и карт */
+* {
+    box-sizing: border-box; /* Обеспечиваем, что padding и border не увеличивают размер элемента */
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: greenyellow;
+    text-align: center; /* Центрируем содержимое в header */
+    display: flex;
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+}
+
+.card1 {
+    height: 210px;
+    width: 100%; /* Адаптивная ширина */
+    margin: 0 auto; /* Центрируем карточки */
+}
+
+.text1 {
+    text-align: center; /* Центрируем текст на всех устройствах */
+    margin-left: 0; /* Убираем отступы */
+}
+
+.img_zavod, .img_ormon, .img_plast {
+    height: auto; /* Даем возможность изображениям изменять пропорции */
+    width: 100%; /* Сделаем ширину адаптивной */
+    max-width: 1100px; /* Ограничиваем максимальную ширину */
+    display: block; /* Убираем лишние отступы */
+    margin: 0 auto; /* Центрируем изображение */
+}
+
+.info_zavod, .info_ormon {
+    margin: 0 auto; /* Центрируем информацию */
+    text-align: center; /* Центрируем текст */
+}
+
+.textor, .textpl, .tak1, .tak3, .tak4 {
+    font-weight: bold;
+}
+
+.textor1, .textor2, .textpl2, .tak6, .tak8, .tak11 {
+    font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+    .text1 {
+        font-size: 20px; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+
+    .card1 {
+        width: 100%; /* Карточки занимают всю ширину на маленьких экранах */
+    }
+
+    .img_zavod, .img_ormon, .img_plast {
+        height: 250px; /* Уменьшаем изображения на малых экранах */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .info_zavod, .info_ormon {
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 400px) {
+    .text1 {
+        font-size: 18px; /* Уменьшаем размер шрифта на очень маленьких экранах */
+    }
+
+    .card1 {
+        width: 100%; /* Полная ширина на маленьких экранах */
+    }
+
+    .img_zavod, .img_ormon, .img_plast {
+        height: 175px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .info_zavod, .info_ormon {
+        font-weight: 400;
+    }
+}
